@@ -21,7 +21,7 @@ for (let i = 0; i < note_columns.length; i++) {
 
 // Add column
 
-let add_column = (fret = null, string_num = null) => {
+let add_column = (place = null, fret = null, string_num = null) => {
     let col = document.createElement('div');
     col.classList.add('note-column');
 
@@ -40,8 +40,18 @@ let add_column = (fret = null, string_num = null) => {
         highlight_column(col);
     });
 
-    tab.appendChild(col);
-    
+    // Highlight newly added column
+    highlight_column(col);
+
+    if (place != null) {
+        tab.insertBefore(col, note_columns[place]);
+    } else {
+        tab.appendChild(col);
+    }
+}
+
+let remove_column = () => {
+
 }
 
 // Update note-list based on changes to the tab
