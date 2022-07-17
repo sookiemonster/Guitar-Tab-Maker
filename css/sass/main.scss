@@ -1,4 +1,4 @@
-@import "variables", "tab";
+@use 'master' as *;
 
 @mixin fill-container {
     width: 100%;
