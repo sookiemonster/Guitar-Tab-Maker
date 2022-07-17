@@ -27,11 +27,11 @@ let add_column = (place = null, fret = null, string_num = null) => {
             note.textContent = '-';
         }
 
-        col.appendChild(note)
+        col.appendChild(note);
     }
     
     col.addEventListener('click', function() {
-        highlight_column(col)
+        highlight_column(col);
     });
 
     if (place != null) {
@@ -44,8 +44,19 @@ let add_column = (place = null, fret = null, string_num = null) => {
     highlight_column(col);
 }
 
-let remove_column = () => {
+let remove_column = (place) => {
+    len = note_columns.length;
+    if (len <= 0) {
+        return null;
+    }
 
+    if (place > len) {
+        // Remove the last column
+        note_columns[len - 1].remove();
+    } else {
+        // Remove the specified column
+        note_columns[place].remove();
+    }
 }
 
 // Add first column on start
