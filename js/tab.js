@@ -1,5 +1,5 @@
 
-let note_columns = document.querySelectorAll('.note-column');
+let note_columns = document.getElementsByClassName('note-column');
 let tab = document.getElementById('tab');
 
 // Highlight clicked columns
@@ -11,12 +11,6 @@ let highlight_column = (target) => {
     }
     previous = target;
     target.classList.add('highlight');
-}
-
-for (let i = 0; i < note_columns.length; i++) {
-    note_columns[i].addEventListener('click', function() {
-        highlight_column(note_columns[i]);
-    });
 }
 
 // Add column
@@ -37,33 +31,23 @@ let add_column = (place = null, fret = null, string_num = null) => {
     }
     
     col.addEventListener('click', function() {
-        highlight_column(col);
+        highlight_column(col)
     });
-
-    // Highlight newly added column
-    highlight_column(col);
 
     if (place != null) {
         tab.insertBefore(col, note_columns[place]);
     } else {
         tab.appendChild(col);
     }
+    
+    // Highlight newly added column
+    highlight_column(col);
 }
 
 let remove_column = () => {
 
 }
 
-// Update note-list based on changes to the tab
+// Add first column on start
 
-const config = { 
-    childList: true
-}
-
-const observer = new MutationObserver(function() {
-    note_columns = document.querySelectorAll('.note-column');
-    // console.log('TAB CHANGED');
-    // console.log(note_columns);
-});
-
-observer.observe(tab, config);
+add_column();
