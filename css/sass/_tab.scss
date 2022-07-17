@@ -4,6 +4,23 @@ $block-length: 1.5rem;
 
 .tab-container {
     display: flex;
+
+    #tab {
+        display: flex;
+    }
+
+    .note-column {
+        display: flex;
+        flex-direction: column;
+        padding: 0 7px;
+        cursor: pointer;
+    
+        span {
+            display: block;
+            height: $block-length;
+            font-size: 1.3rem;
+        }
+    }
 }
 
 .string-label-container {
@@ -26,19 +43,6 @@ $block-length: 1.5rem;
         font-size: .9rem;
     }
 
-}
-
-.note-column {
-    display: flex;
-    flex-direction: column;
-    padding: 0 7px;
-    cursor: pointer;
-
-    span {
-        display: block;
-        height: $block-length;
-        font-size: 1.3rem;
-    }
 }
 
 .highlight {

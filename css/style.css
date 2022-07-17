@@ -2,6 +2,20 @@
 .tab-container {
   display: flex;
 }
+.tab-container #tab {
+  display: flex;
+}
+.tab-container .note-column {
+  display: flex;
+  flex-direction: column;
+  padding: 0 7px;
+  cursor: pointer;
+}
+.tab-container .note-column span {
+  display: block;
+  height: 1.5rem;
+  font-size: 1.3rem;
+}
 
 .string-label-container {
   display: flex;
@@ -17,18 +31,6 @@
   width: 100%;
   height: 1.5rem;
   font-size: 0.9rem;
-}
-
-.note-column {
-  display: flex;
-  flex-direction: column;
-  padding: 0 7px;
-  cursor: pointer;
-}
-.note-column span {
-  display: block;
-  height: 1.5rem;
-  font-size: 1.3rem;
 }
 
 .highlight {
