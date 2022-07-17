@@ -1,0 +1,46 @@
+@use "sass:color";
+
+$block-length: 1.5rem;
+
+.tab-container {
+    display: flex;
+}
+
+.string-label-container {
+
+
+    display: flex;
+    flex-direction: column;
+    width: 1.75rem;
+    color: $white;
+    background-color: $black;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: $block-length;
+
+        font-size: .9rem;
+    }
+
+}
+
+.note-column {
+    display: flex;
+    flex-direction: column;
+    padding: 0 7px;
+    cursor: pointer;
+
+    span {
+        display: block;
+        height: $block-length;
+        font-size: 1.3rem;
+    }
+}
+
+.highlight {
+    background-color: color.scale($active-color, $alpha: -70%);
+}
