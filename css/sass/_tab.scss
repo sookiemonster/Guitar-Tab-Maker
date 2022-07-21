@@ -2,18 +2,23 @@
 @use "variables" as *;
 
 $block-length: 1.5rem;
+$row-gap: 1rem;
 
 .tab-container {
     display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
 
     #tab {
         display: flex;
+        flex-wrap: wrap;
     }
 
     .note-column {
         display: flex;
         flex-direction: column;
         padding: 0 7px;
+        margin-bottom: $row-gap;
         cursor: pointer;
     
         span {
@@ -26,12 +31,12 @@ $block-length: 1.5rem;
 
 .string-label-container {
 
-
     display: flex;
     flex-direction: column;
     width: 1.75rem;
     color: $white;
     background-color: $black;
+    margin-bottom: $row-gap;
 
     div {
         display: flex;

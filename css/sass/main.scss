@@ -9,6 +9,8 @@
     box-sizing: border-box;
 }
 
+// LAYOUT
+
 html {
     @include fill-container;
 }
@@ -16,10 +18,31 @@ html {
 body {
     @include fill-container;
     font-family: $primary-font;
-    padding: 20px calc(15px + 3vw);
+    margin: 0;
+    padding: 40px calc(15px + 3vw) 0;
 }
 
+.layout-container {
+    @include fill-container;
+    
+    display: grid;
+    grid-template-columns: 1fr $fret-width;
+
+    .left-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+// TYPOGRAPHY
+
 h1 {
+    display: block;
     font-size: 2.25rem;
     font-weight: 600;
+    margin: 0;
+
+    grid-column: -1/1;
 }

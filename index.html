@@ -12,17 +12,19 @@
     </head>
     <body>
         <div class="layout-container">
-            <h1>Guitar Tab Maker</h1>
-            <div class="tab-container">
-                <div class="string-label-container">
-                    <div id="str-1">E</div>
-                    <div id="str-2">B</div>
-                    <div id="str-3">G</div>
-                    <div id="str-4">D</div>
-                    <div id="str-5">A</div>
-                    <div id="str-6">E</div>
+            <div class="left-panel">
+                <h1>Guitar Tab Maker</h1>
+                <div id="tab" class="tab-container">
+                    <div class="string-label-container">
+                        <div id="str-1">E</div>
+                        <div id="str-2">B</div>
+                        <div id="str-3">G</div>
+                        <div id="str-4">D</div>
+                        <div id="str-5">A</div>
+                        <div id="str-6">E</div>
+                    </div>
+                    <!-- <div id="tab"></div> -->
                 </div>
-                <div id="tab"></div>
             </div>
             <div class="input-panel">
                 <div class="actions-container">
@@ -39,28 +41,28 @@
                 <div class="effects-container">
                     <!-- Use effect & then apply to specific, selected note. Edit fret number text to display effect on frets -->
                     <div class="effect">
-                        <input id="hammer" type="checkbox" class="effect-btn">h</div>
+                        <input id="hammer" type="checkbox" class="effect-btn">h</input>
                         <label for="hammer">Hammer-on</label>
                     </div>
                     
                     <div class="effect">
-                        <input id="pull" type="checkbox" class="effect-btn">p</div>
+                        <input id="pull" type="checkbox" class="effect-btn">p</input>
                         <label for="pull">Pull-off</label>
                     </div>
 
                     <div class="effect">
-                        <input id="pull" type="checkbox" class="effect-btn">/</div>
-                        <label for="pull">Slide-up</label>
+                        <input id="slide-up" type="checkbox" class="effect-btn">/</input>
+                        <label for="slide-up">Slide-up</label>
                     </div>
 
                     <div class="effect">
-                        <input id="pull" type="checkbox" class="effect-btn">\</div>
-                        <label for="pull">Slide-down</label>
+                        <input id="slide-down" type="checkbox" class="effect-btn">\</input>
+                        <label for="slide-down">Slide-down</label>
                     </div>
 
                     <div class="effect">
-                        <input id="pull" type="checkbox" class="effect-btn">b</div>
-                        <label for="pull">Bend</label>
+                        <input id="bend" type="checkbox" class="effect-btn">b</input>
+                        <label for="bend">Bend</label>
                     </div>
 
                     <div class="btn">UP_STRUM</div>
